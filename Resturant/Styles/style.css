@@ -1,0 +1,7 @@
+@font-face {
+  font-family: vazir;
+  src: url(../Fonts/Vazirmatn-VariableFont_wght.ttf);
+}
+body {
+  font-family: vazir, Arial, Helvetica, sans-serif;
+}
