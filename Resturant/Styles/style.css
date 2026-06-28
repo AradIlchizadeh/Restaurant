@@ -17,6 +17,9 @@ html {
 body {
   font-family: vazir, Arial, Helvetica, sans-serif;
 }
+p {
+  font-size: 1.5rem;
+}
 .header {
   display: flex;
   flex-direction: column;
@@ -51,6 +54,8 @@ body {
 .logo {
   width: 30rem;
 }
+/* general */
+
 .button {
   border-radius: 2rem;
   padding: 1rem 2rem;
@@ -63,10 +68,15 @@ body {
   background-color: var(--Yellow);
   color: var(--Purple);
 }
+.button-purple {
+  background-color: var(--Purple);
+  color: var(--Yellow);
+}
 .header .button {
   margin-bottom: 2rem;
 }
-.button-yellow:hover {
+.button-yellow:hover,
+.button-purple:hover {
   background-color: var(--White);
 }
 
@@ -83,5 +93,66 @@ body {
   }
   .logo {
     width: 20rem;
+  }
+}
+
+.purple {
+  color: var(--Purple);
+}
+h1,
+h2 {
+  font-size: 4rem;
+  margin: 0;
+}
+/* menu */
+.menu {
+  background-color: var(--Yellow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu h1 {
+  padding: 2rem;
+  color: var(--White);
+}
+.menu-items {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20%;
+  justify-content: space-evenly;
+  align-content: space-between;
+}
+.menu-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  margin: 3rem 0rem;
+}
+.menu-item:hover {
+  transform: scale(1.02);
+}
+.menu-item-text {
+  background-color: var(--White);
+  color: var(--Purple);
+  text-align: center;
+  border-radius: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.menu-item-img {
+  border-radius: 2rem;
+  margin-bottom: -5rem;
+}
+@media only screen and (max-width: 992px) {
+  .menu-items {
+    grid-template-columns: 40% 40%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .menu-items {
+    grid-template-columns: 90%;
   }
 }
